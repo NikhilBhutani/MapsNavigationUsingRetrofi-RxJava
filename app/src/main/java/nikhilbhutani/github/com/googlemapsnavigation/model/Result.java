@@ -10,6 +10,13 @@ import java.util.List;
  * Created by nikhilbhutani on 01/07/17.
  */
 
+//@Expose
+//String myString;  // will be serialized as myString
+//
+//
+//@SerializedName("m_s")
+//String myString; // will be serialized as m_s
+
 public class Result {
 
     @SerializedName("geometry")

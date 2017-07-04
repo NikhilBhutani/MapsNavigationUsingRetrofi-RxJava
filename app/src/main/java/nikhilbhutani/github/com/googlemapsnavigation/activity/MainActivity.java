@@ -1,5 +1,6 @@
-package nikhilbhutani.github.com.googlemapsnavigation;
+package nikhilbhutani.github.com.googlemapsnavigation.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,6 +10,8 @@ import com.google.gson.GsonBuilder;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
+import nikhilbhutani.github.com.googlemapsnavigation.R;
 import nikhilbhutani.github.com.googlemapsnavigation.interfaces.MyApiRequestInterface;
 import nikhilbhutani.github.com.googlemapsnavigation.model.PlacesApiResponse;
 import retrofit2.Call;
@@ -61,5 +64,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @OnClick(R.id.button)
+    public void nextActivity(){
+      startActivity(new Intent(MainActivity.this, DirectionActivity.class));
     }
 }
