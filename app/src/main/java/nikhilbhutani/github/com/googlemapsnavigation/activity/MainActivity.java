@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     String baseUrl = "https://maps.googleapis.com/maps/";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,9 +40,10 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
 
+
         MyApiRequestInterface myApiRequestInterface = retrofit.create(MyApiRequestInterface.class);
 
-        Call<PlacesApiResponse> myApiRequestInterfaceCall = myApiRequestInterface.getJson("newyork", "API KEY");
+        Call<PlacesApiResponse> myApiRequestInterfaceCall = myApiRequestInterface.getJson("janakpuri", "API KEY HERE");
 
         myApiRequestInterfaceCall.enqueue(new Callback<PlacesApiResponse>() {
             @Override
